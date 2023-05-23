@@ -1,0 +1,28 @@
+@model CreatePaisViewModel
+
+<div class="row">
+    <div class="col text-center">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+</div>
+
+
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="NmPais" class="form-label">País</label>
+        <input asp-for="NmPais" type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="SiglaPais" class="form-label">Sigla</label>
+        <input asp-for="SiglaPais" type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="DdiPais" class="form-label">DDI</label>
+        <input asp-for="DdiPais" type="text" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <button asp-controller="Pais" asp-action="Index"  class="btn btn-danger">Voltar</button>
+</form>

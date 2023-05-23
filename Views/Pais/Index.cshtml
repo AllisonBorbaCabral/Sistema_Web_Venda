@@ -1,0 +1,76 @@
+@* @{
+    var todo = ViewData["todo"] as Todo;
+    var todo2 = ViewBag.Todo;
+}
+<h1>@ViewData["apresentacao"]</h1>
+
+<h2>@ViewData["apresentacao2"]</h2>
+
+<h3>@todo?.Title</h3>
+
+<h3>@todo2?.Title</h3>
+
+<p>@todo?.Description</p> *@
+
+@model ListPaisViewModel
+
+<div class="row">
+    <div class="col text-center">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">País</th>
+                    <th scope="col">Sigla</th>
+                    <th scope="col">DDI</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var pais in Model.Paises)
+                {
+                    <tr>
+                        <th scope="row">@pais.Id</th>
+                        <td>@pais.NmPais</td>
+                        <td>@pais.SiglaPais</td>
+                        <td>@pais.DdiPais</td>
+                        <td>
+                            <a 
+                                asp-controller="Pais"
+                                asp-action="Edit"
+                                asp-route-id="@pais.Id"
+                                class="btn btn-sm btn-warning"
+                                >
+                                Editar
+                            </a>
+                            <a href="" class="btn btn-sm btn-info">Visualizar</a>
+                            <a 
+                                asp-controller="Pais" 
+                                asp-action="Delete" 
+                                asp-route-id="@pais.Id" 
+                                onclick="return confirm('Tem certeza que deseja excluir esse País?')"
+                                class="btn btn-sm btn-danger"
+                                >
+                                Excluir
+                            </a>
+                        </td>
+                    </tr>
+                }
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col">
+        <a asp-controller="Pais" asp-action="Create" class="btn btn-primary">Novo País</a>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+@model EditPaisViewModel
+
+<div class="row">
+    <div class="col text-center">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+</div>
+
+
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="NmPais" class="form-label">País</label>
+        <input asp-for="NmPais" type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="SiglaPais" class="form-label">Sigla</label>
+        <input asp-for="SiglaPais" type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="DdiPais" class="form-label">DDI</label>
+        <input asp-for="DdiPais" type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="DataCadastro" class="form-label">Data de Cadastro</label>
+        <input asp-for="DataCadastro" type="datetime-local" class="form-control" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="DataUltAlteracao" class="form-label">Data de Alteração</label>
+        <input asp-for="DataUltAlteracao" type="datetime-local" class="form-control" readonly>
+    </div>
+
+    <button type="submit" class="btn btn-primary" onclick="return confirm('Tem certeza que deseja salvar as alterações realizadas?')">Salvar</button>
+    <button asp-controller="Pais" asp-action="Index"  class="btn btn-danger">Voltar</button>
+</form>
