@@ -1,0 +1,51 @@
+@model ModalPaisViewModel
+
+@{
+  Layout = null;
+}
+
+@* <div class="row">
+    <div class="col text-center">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+</div> *@
+
+
+<div class="container">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="paisModalLabel">Detalhes do País: @Model.NmPais</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <dl class="dl-horizontal">
+            <dt>@Html.DisplayNameFor(pais => pais.Id)</dt>
+            <dd>@Html.DisplayFor(pais => pais.Id)</dd>
+            <dt>@Html.DisplayNameFor(model => model.NmPais)</dt>
+            <dd>@Html.DisplayFor(model => model.NmPais)</dd>
+            <dt>@Html.DisplayNameFor(model => model.SiglaPais)</dt>
+            <dd>@Html.DisplayFor(model => model.SiglaPais)</dd>
+            <dt>@Html.DisplayNameFor(model => model.DdiPais)</dt>
+            <dd>@Html.DisplayFor(model => model.DdiPais)</dd>
+            <dt>@Html.DisplayNameFor(model => model.DataCadastro)</dt>
+            <dd>@Html.DisplayFor(model => model.DataCadastro)</dd>
+            <dt>@Html.DisplayNameFor(model => model.DataUltAlteracao)</dt>
+            <dd>@Html.DisplayFor(model => model.DataUltAlteracao)</dd>
+          </dl>
+        </div>
+        <div class="modal-footer">
+          <a 
+            type="button" 
+            class="btn btn-primary" 
+            asp-controller="Pais"
+            asp-action="Edit" 
+            asp-route-id="@Model.Id"
+            >
+            Editar
+          </a>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+</div>

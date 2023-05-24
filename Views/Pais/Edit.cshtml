@@ -1,13 +1,31 @@
-@model EditPaisViewModel
+@model ModalPaisViewModel
 
 <div class="row">
     <div class="col text-center">
         <h1>@ViewData["Title"]</h1>
     </div>
 </div>
-
-
 <form method="post">
+<!-- Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalLabel">Editar</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Tem certeza que deseja alterar este registro?</p>
+        </div>
+        <div class="modal-footer">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
     <div class="mb-3">
         <label asp-for="NmPais" class="form-label">País</label>
         <input asp-for="NmPais" type="text" class="form-control">
@@ -33,6 +51,8 @@
         <input asp-for="DataUltAlteracao" type="datetime-local" class="form-control" readonly>
     </div>
 
-    <button type="submit" class="btn btn-primary" onclick="return confirm('Tem certeza que deseja salvar as alterações realizadas?')">Salvar</button>
-    <button asp-controller="Pais" asp-action="Index"  class="btn btn-danger">Voltar</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
+        Salvar
+    </button>
+    <button asp-controller="Pais" asp-action="Index" class="btn btn-danger"><i class="fa-solid fa-chevron-left"></i> Voltar</button>
 </form>

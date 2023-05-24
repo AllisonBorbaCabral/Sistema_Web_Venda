@@ -40,7 +40,7 @@ namespace AspNetCore.Controllers
             {
                 return NotFound();
             }
-            var viewModel = new EditPaisViewModel
+            var viewModel = new ModalPaisViewModel
             {
                 NmPais = pais.NmPais,
                 SiglaPais = pais.SiglaPais,
@@ -52,7 +52,7 @@ namespace AspNetCore.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(int id, EditPaisViewModel data)
+        public IActionResult Edit(int id, ModalPaisViewModel data)
         {
             var pais = _context.GetPais(id);
             if (pais is null)
@@ -81,9 +81,46 @@ namespace AspNetCore.Controllers
             {
                 return NotFound();
             }
-            _context.DeletePais(id);
+            var viewModel = new ModalPaisViewModel
+            {
+                Id = pais.Id,
+                NmPais = pais.NmPais,
+                SiglaPais = pais.SiglaPais,
+                DdiPais = pais.DdiPais,
+                DataCadastro = pais.DataCadastro,
+                DataUltAlteracao = pais.DataUltAlteracao
+            };
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id, ModalPaisViewModel data)
+        {
+            var pais = _context.GetPais(id);
+            if (pais is null)
+            {
+                return NotFound();
+            }
+
+            _context.DeletePais(pais.Id);
             return RedirectToAction(nameof(Index));
         }
 
+        public IActionResult Details(int id)
+        {
+            var pais = _context.GetPais(id);
+            var viewModel = new ModalPaisViewModel
+            {
+                Id = pais.Id,
+                NmPais = pais.NmPais,
+                SiglaPais = pais.SiglaPais,
+                DdiPais = pais.DdiPais,
+                DataCadastro = pais.DataCadastro,
+                DataUltAlteracao = pais.DataUltAlteracao
+            };
+            return View(viewModel);
+        }
     }
+
+
 }

@@ -14,10 +14,21 @@
 
 @model ListPaisViewModel
 
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  </div>
+</div>
+
+
 <div class="row">
     <div class="col text-center">
-        <h1>@ViewData["Title"]</h1>
+        <h1><i class="fa-solid fa-earth-americas"></i>@ViewData["Title"]</h1>
     </div>
+</div>
+
+<div class="col">
+    <a class="btn btn-primary" asp-action="Create"><i class="bi bi-plus-circle-fill"></i> Novo País</a>
 </div>
 
 <div class="row">
@@ -25,7 +36,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">Cód.</th>
                     <th scope="col">País</th>
                     <th scope="col">Sigla</th>
                     <th scope="col">DDI</th>
@@ -42,22 +53,28 @@
                         <td>@pais.DdiPais</td>
                         <td>
                             <a 
-                                asp-controller="Pais"
                                 asp-action="Edit"
+                                asp-controller="Pais"
                                 asp-route-id="@pais.Id"
                                 class="btn btn-sm btn-warning"
                                 >
-                                Editar
+                                <i class="bi bi-pencil-square text-light"></i>
                             </a>
-                            <a href="" class="btn btn-sm btn-info">Visualizar</a>
+                            <button 
+                                data-bs-toggle="modal"
+                                data-bs-target="#modal"
+                                class="btn btn-sm btn-info detail"
+                                data-id="@pais.Id"
+                                >
+                                <i class="bi bi-eye-fill text-light"></i>
+                            </button>
                             <a 
-                                asp-controller="Pais" 
-                                asp-action="Delete" 
-                                asp-route-id="@pais.Id" 
-                                onclick="return confirm('Tem certeza que deseja excluir esse País?')"
+                                asp-action="Delete"
+                                asp-controller="Pais"
+                                asp-route-id="@pais.Id"
                                 class="btn btn-sm btn-danger"
                                 >
-                                Excluir
+                                <i class="bi bi-trash-fill"></i>
                             </a>
                         </td>
                     </tr>
@@ -69,8 +86,52 @@
 </div>
 
 
-<div class="row">
-    <div class="col">
-        <a asp-controller="Pais" asp-action="Create" class="btn btn-primary">Novo País</a>
-    </div>
-</div>
+@section scripts{
+    <script>
+        $(function () {
+            $(".detail").click(function () {
+                var id = $(this).attr("data-id");
+                $("#modal").load("Pais/Details?id=" + id, function () {
+                    $("#modal").modal();
+                })
+            });
+            $(".edit").click(function () {
+                var id = $(this).attr("data-id");
+                $("#modal").load("Pais/Edit?id=" + id, function () {
+                    $("#modal").modal();
+                })
+            });
+        })
+        @* $(function () {
+            $(".detail").click(function () {
+                var id = $(this).attr("data-id");
+                $("#modal").load("Detail/id=" + id, function () {
+                    $("#modal").modal();
+                })
+            });
+
+            $(".edit").click(function () {
+                var id = $(this).attr("data-id");
+                alert(id);
+                $("#modal").load("Edit/id=" + id, function () {
+                    $("#modal").modal();
+                })
+            });
+
+            $(".delete").click(function () {
+                var id = $(this).attr("data-id");
+                alert(id);
+                $("#modal").load("Delete?id=" + id, function () {
+                    $("#modal").modal();
+                })
+            });
+
+           $(".create").click(function () {
+                $("#modal").load("Create", function () {
+                    $("#modal").modal();
+                })
+            });
+
+        }) *@
+    </script>
+}

@@ -1,0 +1,97 @@
+@model ModalPaisViewModel
+
+<div class="row">
+    <div class="col text-center">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">Excluir</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Tem certeza que deseja excluir este registro?</p>
+      </div>
+      <div class="modal-footer">
+        <form asp-action="Delete">
+            <input type="submit" value="Excluir" class="btn btn-danger" />
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<h1>Deletar</h1>
+
+<div>
+    <h4><i class="fa-solid fa-earth-americas"></i> País</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NmPais)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NmPais)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SiglaPais)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SiglaPais)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DdiPais)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DdiPais)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataCadastro)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataCadastro)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataUltAlteracao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataUltAlteracao)
+        </dd>
+    </dl>
+
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal">
+        Excluir
+    </button>
+    <a class="ms-2 btn btn-primary" asp-action="Index"><i class="fa-solid fa-chevron-left"></i> Voltar</a>
+    
+    @* <form asp-action="Delete">
+        <input type="submit" value="Deletar" class="btn btn-danger" />         
+        <a class="ms-2 btn btn-primary" asp-action="Index"><i class="fa-solid fa-chevron-left"></i> Voltar</a>
+    </form> *@
+</div>
+
+@* @section Script{
+    <script>
+        $(function () {
+            $(".delete").click(function () {
+                var id = $(this).attr("data-id");
+                $("#modal").load("Pais/Delete?id=" + id, function () {
+                    $("#modal").modal();
+                })
+            });
+        })
+    </script>
+} *@
