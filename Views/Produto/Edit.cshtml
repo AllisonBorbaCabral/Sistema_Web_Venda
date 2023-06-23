@@ -1,0 +1,68 @@
+@model ModalProdutoViewModel
+
+<div class="row">
+    <div class="col text-center">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+</div>
+<form method="post">
+<!-- Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalLabel">Editar</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Tem certeza que deseja alterar este registro?</p>
+        </div>
+        <div class="modal-footer">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="mb-3">
+        <label asp-for="DsProduto" class="form-label">Produto</label>
+        <input asp-for="DsProduto" type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Ncm" class="form-label">NCM</label>
+        <input asp-for="Ncm" type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Und" class="form-label">UND</label>
+        <input asp-for="Und" type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="gradeCor" class="form-label">Grade de Cores</label>
+        <input asp-for="gradeCor.Id" type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="gradeTamanho" class="form-label">Grade de Tamanhos</label>
+        <input asp-for="gradeTamanho.Id" type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="DataCadastro" class="form-label">Data de Cadastro</label>
+        <input asp-for="DataCadastro" type="text" class="form-control" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="DataUltAlteracao" class="form-label">Data de Alteração</label>
+        <input asp-for="DataUltAlteracao" type="text" class="form-control" readonly>
+    </div>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
+        Salvar
+    </button>
+    <button asp-controller="Produto" asp-action="Index" class="btn btn-danger"><i class="fa-solid fa-chevron-left"></i> Voltar</button>
+</form>

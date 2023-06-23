@@ -1,0 +1,56 @@
+@model ModalCorViewModel
+
+@{
+  Layout = null;
+}
+
+@* <div class="row">
+    <div class="col text-center">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+</div> *@
+
+
+<div class="container">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="paisModalLabel">Detalhes da Cor: @Model.DsCor</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label asp-for="Id" class="form-label">Código</label>
+            <input asp-for="Id" type="text" class="form-control" readonly>
+          </div>
+
+          <div class="mb-3">
+            <label asp-for="DsCor" class="form-label">Cor</label>
+            <input asp-for="DsCor" type="text" class="form-control" readonly>
+          </div>
+
+          <div class="mb-3">
+            <label asp-for="DataCadastro" class="form-label">Data de Cadastro</label>
+            <input asp-for="DataCadastro" type="text" class="form-control" readonly>
+          </div>
+
+          <div class="mb-3">
+            <label asp-for="DataUltAlteracao" class="form-label">Data da Última Alteração</label>
+            <input asp-for="DataUltAlteracao" type="text" class="form-control" readonly>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a 
+            type="button" 
+            class="btn btn-primary" 
+            asp-controller="Cor"
+            asp-action="Edit" 
+            asp-route-id="@Model.Id"
+            >
+            Editar
+          </a>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+</div>

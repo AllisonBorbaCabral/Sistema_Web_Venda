@@ -1,77 +1,77 @@
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/appsettings.Development.json
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/appsettings.json
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/AspNetCore.staticwebassets.runtime.json
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/AspNetCore
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/AspNetCore.deps.json
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/AspNetCore.runtimeconfig.json
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/AspNetCore.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/AspNetCore.pdb
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/AspNetCore.csproj.AssemblyReference.cache
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/AspNetCore.GeneratedMSBuildEditorConfig.editorconfig
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/AspNetCore.AssemblyInfoInputs.cache
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/AspNetCore.AssemblyInfo.cs
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/AspNetCore.csproj.CoreCompileInputs.cache
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/AspNetCore.MvcApplicationPartsAssemblyInfo.cache
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/AspNetCore.RazorAssemblyInfo.cache
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/AspNetCore.RazorAssemblyInfo.cs
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/staticwebassets/msbuild.AspNetCore.Microsoft.AspNetCore.StaticWebAssets.props
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/staticwebassets/msbuild.build.AspNetCore.props
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.AspNetCore.props
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.AspNetCore.props
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/staticwebassets.pack.json
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/staticwebassets.build.json
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/staticwebassets.development.json
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/scopedcss/bundle/AspNetCore.styles.css
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/scopedcss/projectbundle/AspNetCore.bundle.scp.css
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/AspNetCore.dll
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/refint/AspNetCore.dll
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/AspNetCore.pdb
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/AspNetCore.genruntimeconfig.cache
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/ref/AspNetCore.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Azure.Core.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Azure.Identity.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Humanizer.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Microsoft.Bcl.AsyncInterfaces.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Microsoft.Data.SqlClient.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.SqlServer.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Microsoft.Identity.Client.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Microsoft.Identity.Client.Extensions.Msal.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Microsoft.SqlServer.Server.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Microsoft.Win32.SystemEvents.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Mono.TextTemplating.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/MySqlConnector.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/Pomelo.EntityFrameworkCore.MySql.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/System.CodeDom.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/System.Configuration.ConfigurationManager.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/System.Drawing.Common.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/System.Memory.Data.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/System.Runtime.Caching.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/System.Security.Cryptography.ProtectedData.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/System.Security.Permissions.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/System.Windows.Extensions.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
-/home/allison/Documentos/AspNetCore/obj/Debug/net7.0/AspNetCore.csproj.CopyComplete
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
-/home/allison/Documentos/AspNetCore/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/AspNetCore.csproj.AssemblyReference.cache
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/AspNetCore.GeneratedMSBuildEditorConfig.editorconfig
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/AspNetCore.AssemblyInfoInputs.cache
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/AspNetCore.AssemblyInfo.cs
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/AspNetCore.csproj.CoreCompileInputs.cache
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/AspNetCore.MvcApplicationPartsAssemblyInfo.cache
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/AspNetCore.RazorAssemblyInfo.cache
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/AspNetCore.RazorAssemblyInfo.cs
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/appsettings.Development.json
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/appsettings.json
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/AspNetCore.staticwebassets.runtime.json
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/AspNetCore
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/AspNetCore.deps.json
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/AspNetCore.runtimeconfig.json
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/AspNetCore.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/AspNetCore.pdb
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Azure.Core.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Azure.Identity.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Humanizer.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Microsoft.Bcl.AsyncInterfaces.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Microsoft.Data.SqlClient.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Microsoft.Identity.Client.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Microsoft.Identity.Client.Extensions.Msal.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Microsoft.SqlServer.Server.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Microsoft.Win32.SystemEvents.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Mono.TextTemplating.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/MySqlConnector.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/Pomelo.EntityFrameworkCore.MySql.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/System.CodeDom.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/System.Configuration.ConfigurationManager.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/System.Drawing.Common.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/System.Memory.Data.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/System.Runtime.Caching.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/System.Security.Cryptography.ProtectedData.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/System.Security.Permissions.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/System.Windows.Extensions.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/staticwebassets/msbuild.AspNetCore.Microsoft.AspNetCore.StaticWebAssets.props
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/staticwebassets/msbuild.build.AspNetCore.props
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.AspNetCore.props
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.AspNetCore.props
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/staticwebassets.pack.json
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/staticwebassets.build.json
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/staticwebassets.development.json
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/scopedcss/bundle/AspNetCore.styles.css
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/scopedcss/projectbundle/AspNetCore.bundle.scp.css
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/AspNetCore.csproj.CopyComplete
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/AspNetCore.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/refint/AspNetCore.dll
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/AspNetCore.pdb
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/AspNetCore.genruntimeconfig.cache
+/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/Debug/net7.0/ref/AspNetCore.dll

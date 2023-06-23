@@ -1,0 +1,65 @@
+@model ModalEstadoViewModel
+
+@{
+  Layout = null;
+}
+
+@* <div class="row">
+    <div class="col text-center">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+</div> *@
+
+
+<div class="container">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="paisModalLabel">Detalhes do Estado: @Model.NmEstado</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label asp-for="Id" class="form-label">Código</label>
+            <input asp-for="Id" type="text" class="form-control" readonly>
+          </div>
+
+          <div class="mb-3">
+            <label asp-for="NmEstado" class="form-label">Estado</label>
+            <input asp-for="NmEstado" type="text" class="form-control" readonly>
+          </div>
+          <div class="mb-3">
+            <label asp-for="Uf" class="form-label">UF</label>
+            <input asp-for="Uf" type="text" class="form-control" readonly>
+          </div>
+
+          <div class="mb-3">
+            <label asp-for="pais" class="form-label">País</label>
+            <input asp-for="pais.NmPais" type="text" class="form-control" readonly>
+          </div>
+
+          <div class="mb-3">
+            <label asp-for="DataCadastro" class="form-label">Data de Cadastro</label>
+            <input asp-for="DataCadastro" type="text" class="form-control" readonly>
+          </div>
+
+          <div class="mb-3">
+            <label asp-for="DataUltAlteracao" class="form-label">Data da Última Alteração</label>
+            <input asp-for="DataUltAlteracao" type="text" class="form-control" readonly>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a 
+            type="button" 
+            class="btn btn-primary" 
+            asp-controller="Estado"
+            asp-action="Edit" 
+            asp-route-id="@Model.Id"
+            >
+            Editar
+          </a>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+</div>

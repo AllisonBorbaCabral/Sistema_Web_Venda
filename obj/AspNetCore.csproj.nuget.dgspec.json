@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/allison/Documentos/AspNetCore/AspNetCore.csproj": {}
+    "/home/smoucs/Área de Trabalho/AspNetCore-Linux/AspNetCore.csproj": {}
   },
   "projects": {
-    "/home/allison/Documentos/AspNetCore/AspNetCore.csproj": {
+    "/home/smoucs/Área de Trabalho/AspNetCore-Linux/AspNetCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/allison/Documentos/AspNetCore/AspNetCore.csproj",
+        "projectUniqueName": "/home/smoucs/Área de Trabalho/AspNetCore-Linux/AspNetCore.csproj",
         "projectName": "AspNetCore",
-        "projectPath": "/home/allison/Documentos/AspNetCore/AspNetCore.csproj",
-        "packagesPath": "/home/allison/.nuget/packages/",
-        "outputPath": "/home/allison/Documentos/AspNetCore/obj/",
+        "projectPath": "/home/smoucs/Área de Trabalho/AspNetCore-Linux/AspNetCore.csproj",
+        "packagesPath": "/home/smoucs/.nuget/packages/",
+        "outputPath": "/home/smoucs/Área de Trabalho/AspNetCore-Linux/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/allison/.nuget/NuGet/NuGet.Config"
+          "/home/smoucs/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -80,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.105/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.107/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,137 @@
+@* @{
+    var todo = ViewData["todo"] as Todo;
+    var todo2 = ViewBag.Todo;
+}
+<h1>@ViewData["apresentacao"]</h1>
+
+<h2>@ViewData["apresentacao2"]</h2>
+
+<h3>@todo?.Title</h3>
+
+<h3>@todo2?.Title</h3>
+
+<p>@todo?.Description</p> *@
+
+@model ListEstadoViewModel
+
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  </div>
+</div>
+
+
+<div class="row">
+    <div class="col text-center">
+        <h1><i class="fa-solid fa-earth-americas"></i>@ViewData["Title"]</h1>
+    </div>
+</div>
+
+<div class="col">
+    <a class="btn btn-primary" asp-action="Create"><i class="bi bi-plus-circle-fill"></i> Novo Estado</a>
+</div>
+
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Cód.</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">UF</th>
+                    <th scope="col">País</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var estado in Model.Estados)
+                {
+                    <tr>
+                        <th scope="row">@estado.Id</th>
+                        <td>@estado.NmEstado</td>
+                        <td>@estado.Uf</td>
+                        <td>@estado.pais.NmPais</td>
+                        <td>
+                            <a 
+                                asp-action="Edit"
+                                asp-controller="Estado"
+                                asp-route-id="@estado.Id"
+                                class="btn btn-sm btn-warning"
+                                >
+                                <i class="bi bi-pencil-square text-light"></i>
+                            </a>
+                            <button 
+                                data-bs-toggle="modal"
+                                data-bs-target="#modal"
+                                class="btn btn-sm btn-info detail"
+                                data-id="@estado.Id"
+                                >
+                                <i class="bi bi-eye-fill text-light"></i>
+                            </button>
+                            <a 
+                                asp-action="Delete"
+                                asp-controller="Estado"
+                                asp-route-id="@estado.Id"
+                                class="btn btn-sm btn-danger"
+                                >
+                                <i class="bi bi-trash-fill"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+@section scripts{
+    <script>
+        $(function () {
+            $(".detail").click(function () {
+                var id = $(this).attr("data-id");
+                $("#modal").load("Estado/Details?id=" + id, function () {
+                    $("#modal").modal();
+                })
+            });
+            $(".edit").click(function () {
+                var id = $(this).attr("data-id");
+                $("#modal").load("Estado/Edit?id=" + id, function () {
+                    $("#modal").modal();
+                })
+            });
+        })
+        @* $(function () {
+            $(".detail").click(function () {
+                var id = $(this).attr("data-id");
+                $("#modal").load("Detail/id=" + id, function () {
+                    $("#modal").modal();
+                })
+            });
+
+            $(".edit").click(function () {
+                var id = $(this).attr("data-id");
+                alert(id);
+                $("#modal").load("Edit/id=" + id, function () {
+                    $("#modal").modal();
+                })
+            });
+
+            $(".delete").click(function () {
+                var id = $(this).attr("data-id");
+                alert(id);
+                $("#modal").load("Delete?id=" + id, function () {
+                    $("#modal").modal();
+                })
+            });
+
+           $(".create").click(function () {
+                $("#modal").load("Create", function () {
+                    $("#modal").modal();
+                })
+            });
+
+        }) *@
+    </script>
+}

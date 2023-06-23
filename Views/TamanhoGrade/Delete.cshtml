@@ -1,0 +1,68 @@
+@model ModalTamanhosGradeViewModel
+
+<div class="row">
+    <div class="col text-center">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">Excluir</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Tem certeza que deseja excluir este registro?</p>
+      </div>
+      <div class="modal-footer">
+        <form asp-action="Delete">
+            <input type="submit" value="Excluir" class="btn btn-danger" />
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+    <hr />
+    <div class="mb-3">
+        <label asp-for="tamanho" class="form-label">Cód. Tamanho</label>
+        <input asp-for="tamanho.Id" type="text" class="form-control" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="tamanho" class="form-label">Tamanho</label>
+        <input asp-for="tamanho.DsTamanho" type="text" class="form-control" readonly>
+    </div>
+    <div class="mb-3">
+        <label asp-for="gradeTamanho" class="form-label">Cód. Grade</label>
+        <input asp-for="gradeTamanho.Id" type="text" class="form-control" readonly>
+    </div>
+
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal">
+        Excluir
+    </button>
+    <a class="ms-2 btn btn-primary" asp-action="Index"><i class="fa-solid fa-chevron-left"></i> Voltar</a>
+    
+    @* <form asp-action="Delete">
+        <input type="submit" value="Deletar" class="btn btn-danger" />         
+        <a class="ms-2 btn btn-primary" asp-action="Index"><i class="fa-solid fa-chevron-left"></i> Voltar</a>
+    </form> *@
+</div>
+
+@* @section Script{
+    <script>
+        $(function () {
+            $(".delete").click(function () {
+                var id = $(this).attr("data-id");
+                $("#modal").load("Pais/Delete?id=" + id, function () {
+                    $("#modal").modal();
+                })
+            });
+        })
+    </script>
+} *@

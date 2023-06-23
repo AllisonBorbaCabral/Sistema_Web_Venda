@@ -76,6 +76,7 @@ namespace AspNetCore.Controllers
 
         public IActionResult Delete(int id)
         {
+            ViewData["Title"] = "Deletar País";
             var pais = _context.GetPais(id);
             if (pais is null)
             {

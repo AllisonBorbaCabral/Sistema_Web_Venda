@@ -1,9 +1,6 @@
-using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
 using Microsoft.Extensions.Configuration;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Drawing;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 using System.Data;
 using AspNetCore.Models;
 using AspNetCore.ViewModels;
@@ -19,7 +16,7 @@ namespace AspNetCore.Contexts
                 var sql = @"
                     SELECT
                         ID,
-                        NMPAIS,
+                        NM_PAIS,
                         SIGLA,
                         DDI
                     FROM pais";
@@ -33,7 +30,7 @@ namespace AspNetCore.Contexts
                     var pais = new Pais
                     {
                         Id = Convert.ToInt32(reader["ID"]),
-                        NmPais = Convert.ToString(reader["NMPAIS"]),
+                        NmPais = Convert.ToString(reader["NM_PAIS"]),
                         SiglaPais = Convert.ToString(reader["SIGLA"]),
                         DdiPais = Convert.ToString(reader["DDI"])
                     };
@@ -55,7 +52,7 @@ namespace AspNetCore.Contexts
         {
             try
             {
-                var sql = $"SELECT ID, NMPAIS, SIGLA, DDI, DTCADASTRO, DTULTALTERACAO FROM pais WHERE Id = {id}";
+                var sql = $"SELECT ID, NM_PAIS, SIGLA, DDI, DT_CADASTRO, DT_ULT_ALTERACAO FROM pais WHERE Id = {id}";
                 OpenConn();
                 qy = new MySqlCommand(sql, conn);
                 reader = qy.ExecuteReader();
@@ -65,11 +62,11 @@ namespace AspNetCore.Contexts
                     pais = new Pais()
                     {
                         Id = Convert.ToInt32(reader["ID"]),
-                        NmPais = Convert.ToString(reader["NMPAIS"]),
+                        NmPais = Convert.ToString(reader["NM_PAIS"]),
                         SiglaPais = Convert.ToString(reader["SIGLA"]),
                         DdiPais = Convert.ToString(reader["DDI"]),
-                        DataCadastro = Convert.ToDateTime(reader["DTCADASTRO"]),
-                        DataUltAlteracao = Convert.ToDateTime(reader["DTULTALTERACAO"])
+                        DataCadastro = Convert.ToDateTime(reader["DT_CADASTRO"]),
+                        DataUltAlteracao = Convert.ToDateTime(reader["DT_ULT_ALTERACAO"])
                     };
                 }
                 return pais;
@@ -88,7 +85,7 @@ namespace AspNetCore.Contexts
         {
             try
             {
-                var sql = $"INSERT INTO pais (NMPAIS, SIGLA, DDI, DTCADASTRO, DTULTALTERACAO) VALUES('{model.NmPais}', '{model.SiglaPais}', '{model.DdiPais}', '{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}', '{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}');";
+                var sql = $"INSERT INTO pais (NM_PAIS, SIGLA, DDI, DT_CADASTRO, DT_ULT_ALTERACAO) VALUES('{model.NmPais}', '{model.SiglaPais}', '{model.DdiPais}', '{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}', '{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}');";
                 OpenConn();
                 qy = new MySqlCommand(sql, conn);
                 qy.ExecuteNonQuery();
@@ -107,7 +104,7 @@ namespace AspNetCore.Contexts
         {
             try
             {
-                var sql = $"UPDATE pais SET NMPAIS = '{model.NmPais}', SIGLA = '{model.SiglaPais}', DDI = '{model.DdiPais}', DTULTALTERACAO = '{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}' WHERE ID = {model.Id};";
+                var sql = $"UPDATE pais SET NM_PAIS = '{model.NmPais}', SIGLA = '{model.SiglaPais}', DDI = '{model.DdiPais}', DT_ULT_ALTERACAO = '{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}' WHERE ID = {model.Id};";
                 OpenConn();
                 qy = new MySqlCommand(sql, conn);
                 qy.ExecuteNonQuery();

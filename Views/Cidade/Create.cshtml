@@ -1,0 +1,51 @@
+@model CreateCidadeViewModel
+
+<div class="row">
+    <div class="col text-center">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+</div>
+
+
+<form method="post">
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalLabel">Salvar registro</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Deseja salvar o novo registro?
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mb-3">
+        <label asp-for="NmCidade" class="form-label">Cidade</label>
+        <input asp-for="NmCidade" type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Ddd" class="form-label">DDD</label>
+        <input asp-for="Ddd" type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="estado.Id" class="form-label">Estado</label>
+        <input asp-for="estado.Id" type="text" class="form-control">
+    </div>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
+        Salvar
+    </button>
+    <button asp-controller="Estado" asp-action="Index"  class="btn btn-danger">Voltar</button>
+</form>
