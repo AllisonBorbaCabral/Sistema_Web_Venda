@@ -29,30 +29,41 @@
 
 <div>
     <hr />
-    <div class="mb-3">
-        <label asp-for="Id" class="form-label">Código</label>
-        <input asp-for="Id" type="text" class="form-control" readonly>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-sm-1">
+                <label asp-for="Id" class="form-label">Código</label>
+                <input asp-for="Id" type="text" class="form-control" disabled>
+            </div>
+
+            <div class="col-sm-3">
+                <label asp-for="DsTamanho" class="form-label">Tamanho</label>
+                <input asp-for="DsTamanho" type="text" class="form-control" disabled>
+            </div>
+        </div>
+        <div class="row justify-content-md-center text-center">
+            <div class="col-sm-2 g-3">
+                <label asp-for="DataCadastro" class="form-label">Data de Cadastro</label>
+                <input asp-for="DataCadastro" type="text" class="form-control text-center" disabled>
+            </div>
+
+            <div class="col-sm-2 g-3">
+                <label asp-for="DataUltAlteracao" class="form-label">Data de Alteração</label>
+                <input asp-for="DataUltAlteracao" type="text" class="form-control text-center" disabled>
+            </div>
+        </div>
     </div>
 
-    <div class="mb-3">
-        <label asp-for="DsTamanho" class="form-label">Tamanho</label>
-        <input asp-for="DsTamanho" type="text" class="form-control" readonly>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-sm-2 g-3">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal">
+                    Excluir
+                </button>
+                <a class="ms-2 btn btn-primary" asp-action="Index"><i class="fa-solid fa-chevron-left"></i> Voltar</a>
+            </div>
+        </div>
     </div>
-
-    <div class="mb-3">
-        <label asp-for="DataCadastro" class="form-label">Data de Cadastro</label>
-        <input asp-for="DataCadastro" type="text" class="form-control" readonly>
-    </div>
-
-    <div class="mb-3">
-        <label asp-for="DataUltAlteracao" class="form-label">Data da Última Alteração</label>
-        <input asp-for="DataUltAlteracao" type="text" class="form-control" readonly>
-    </div>
-
-    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal">
-        Excluir
-    </button>
-    <a class="ms-2 btn btn-primary" asp-action="Index"><i class="fa-solid fa-chevron-left"></i> Voltar</a>
     
     @* <form asp-action="Delete">
         <input type="submit" value="Deletar" class="btn btn-danger" />         

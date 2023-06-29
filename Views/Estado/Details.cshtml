@@ -15,37 +15,51 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="paisModalLabel">Detalhes do Estado: @Model.NmEstado</h1>
+          <h1 class="modal-title fs-5" id="paisModalLabel">Detalhes</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div class="mb-3">
-            <label asp-for="Id" class="form-label">Código</label>
-            <input asp-for="Id" type="text" class="form-control" readonly>
-          </div>
+          <div class="container">
+            <div class="row justify-content-sm-center">
+              <div class="col-sm-2">
+                <label asp-for="Id" class="form-label">Código</label>
+                <input asp-for="Id" type="text" class="form-control" disabled>
+              </div>
 
-          <div class="mb-3">
-            <label asp-for="NmEstado" class="form-label">Estado</label>
-            <input asp-for="NmEstado" type="text" class="form-control" readonly>
-          </div>
-          <div class="mb-3">
-            <label asp-for="Uf" class="form-label">UF</label>
-            <input asp-for="Uf" type="text" class="form-control" readonly>
-          </div>
+              <div class="col-sm-8">
+                <label asp-for="NmEstado" class="form-label">Estado</label>
+                <input asp-for="NmEstado" type="text" class="form-control">
+              </div>
 
-          <div class="mb-3">
-            <label asp-for="pais" class="form-label">País</label>
-            <input asp-for="pais.NmPais" type="text" class="form-control" readonly>
-          </div>
+              <div class="col-sm-2">
+                <label asp-for="Uf" class="form-label">UF</label>
+                <input asp-for="Uf" type="text" class="form-control">
+              </div>
+            </div>
+            
+            <div class="row justify-content-md-center">
+              <div class="col-sm-2">
+                <label asp-for="pais" class="form-label">Código</label>
+                <input asp-for="pais.Id" type="text" class="form-control">
+              </div>
 
-          <div class="mb-3">
-            <label asp-for="DataCadastro" class="form-label">Data de Cadastro</label>
-            <input asp-for="DataCadastro" type="text" class="form-control" readonly>
-          </div>
+              <div class="col-sm-10">
+                <label asp-for="pais" class="form-label">País</label>
+                <input asp-for="pais.NmPais" type="text" class="form-control" disabled>
+              </div>
+            </div>
 
-          <div class="mb-3">
-            <label asp-for="DataUltAlteracao" class="form-label">Data da Última Alteração</label>
-            <input asp-for="DataUltAlteracao" type="text" class="form-control" readonly>
+            <div class="row justify-content-md-center text-center">
+              <div class="col-sm-5 g-3">
+                <label asp-for="DataCadastro" class="form-label">Data de Cadastro</label>
+                <input asp-for="DataCadastro" type="text" class="form-control text-center" disabled>
+              </div>
+
+              <div class="col-sm-5 g-3">
+                <label asp-for="DataUltAlteracao" class="form-label">Data de Alteração</label>
+                <input asp-for="DataUltAlteracao" type="text" class="form-control text-center" disabled>
+              </div>
+            </div>
           </div>
         </div>
         <div class="modal-footer">

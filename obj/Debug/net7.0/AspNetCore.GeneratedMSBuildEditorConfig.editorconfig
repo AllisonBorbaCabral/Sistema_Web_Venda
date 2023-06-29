@@ -100,34 +100,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29yL1ZpZXdNb2RlbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/smoucs/Área de Trabalho/AspNetCore-Linux/Views/CorGrade/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29yR3JhZGUvQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/smoucs/Área de Trabalho/AspNetCore-Linux/Views/CorGrade/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29yR3JhZGUvRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/smoucs/Área de Trabalho/AspNetCore-Linux/Views/CorGrade/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29yR3JhZGUvRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/smoucs/Área de Trabalho/AspNetCore-Linux/Views/CorGrade/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29yR3JhZGUvRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/smoucs/Área de Trabalho/AspNetCore-Linux/Views/CorGrade/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29yR3JhZGUvSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/smoucs/Área de Trabalho/AspNetCore-Linux/Views/CorGrade/Message.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29yR3JhZGUvTWVzc2FnZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/smoucs/Área de Trabalho/AspNetCore-Linux/Views/CorGrade/ViewModel.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29yR3JhZGUvVmlld01vZGVsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [/home/smoucs/Área de Trabalho/AspNetCore-Linux/Views/Estado/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXN0YWRvL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -302,34 +274,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/home/smoucs/Área de Trabalho/AspNetCore-Linux/Views/Pais/ViewModel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFpcy9WaWV3TW9kZWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/smoucs/Área de Trabalho/AspNetCore-Linux/Views/Produto/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHV0by9DcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/smoucs/Área de Trabalho/AspNetCore-Linux/Views/Produto/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHV0by9EZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/smoucs/Área de Trabalho/AspNetCore-Linux/Views/Produto/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHV0by9EZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/smoucs/Área de Trabalho/AspNetCore-Linux/Views/Produto/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHV0by9FZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/smoucs/Área de Trabalho/AspNetCore-Linux/Views/Produto/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHV0by9JbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/smoucs/Área de Trabalho/AspNetCore-Linux/Views/Produto/Message.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHV0by9NZXNzYWdlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/smoucs/Área de Trabalho/AspNetCore-Linux/Views/Produto/ViewModel.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHV0by9WaWV3TW9kZWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/smoucs/Área de Trabalho/AspNetCore-Linux/Views/Shared/Error.cshtml]

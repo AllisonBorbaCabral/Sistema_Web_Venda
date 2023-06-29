@@ -1,0 +1,142 @@
+create database sistema;
+
+use sistema;
+
+create table PAIS(
+ID INT auto_increment,
+NM_PAIS VARCHAR(100) not null,
+DDI VARCHAR(5) not null,
+SIGLA VARCHAR(3) not null,
+DT_CADASTRO DATETIME not null,
+DT_ULT_ALTERACAO DATETIME null,
+primary KEY(ID)
+)
+
+create table ESTADO(
+ID INT auto_increment,
+NM_ESTADO VARCHAR(100) not null,
+UF VARCHAR(2) not null,
+DT_CADASTRO DATETIME not null,
+DT_ULT_ALTERACAO DATETIME null,
+ID_PAIS INT not null,
+foreign KEY(ID_PAIS) references PAIS(ID),
+primary KEY(ID)
+)
+
+create table CIDADE(
+ID INT auto_increment,
+NM_CIDADE VARCHAR(100) not null,
+DDD VARCHAR(2) not null,
+DT_CADASTRO DATETIME not null,
+DT_ULT_ALTERACAO DATETIME null,
+ID_ESTADO INT not null,
+foreign key(ID_ESTADO) references ESTADO(ID),
+primary KEY(ID)
+)
+
+create table COR(
+ID INT auto_increment,
+DS_COR VARCHAR(255) not null,
+DT_CADASTRO DATETIME not null,
+DT_ULT_ALTERACAO DATETIME null,
+primary KEY(ID)
+)
+
+create table GRADE_COR(
+ID INT auto_increment,
+DS_GRADE VARCHAR(255) not null,
+DT_CADASTRO DATETIME not null,
+DT_ULT_ALTERACAO DATETIME null,
+primary KEY(ID)
+)
+
+create table COR_GRADE(
+ID_COR INT not null,
+ID_GRADE_COR INT not null,
+foreign KEY(ID_COR) references COR(ID),
+foreign KEY(ID_GRADE_COR) references GRADE_COR(ID),
+primary KEY(ID_COR, ID_GRADE_COR)
+)
+
+create table TAMANHO(
+ID INT auto_increment,
+DS_TAMANHO VARCHAR(10) not NULL,
+DT_CADASTRO DATETIME not null,
+DT_ULT_ALTERACAO DATETIME null,
+primary KEY(ID)
+)
+
+create table GRADE_TAMANHO(
+ID INT auto_increment,
+DS_GRADE VARCHAR(255) not null,
+DT_CADASTRO DATETIME not null,
+DT_ULT_ALTERACAO DATETIME null,
+primary KEY(ID)
+)
+
+create table TAMANHO_GRADE(
+ID_TAMANHO INT not null,
+ID_GRADE_TAMANHO INT not null,
+foreign KEY(ID_TAMANHO) references TAMANHO(ID),
+foreign KEY(ID_GRADE_TAMANHO) references GRADE_TAMANHO(ID),
+primary KEY(ID_TAMANHO, ID_GRADE_TAMANHO)
+)
+
+create table PRODUTO(
+ID INT auto_increment,
+DS_PRODUTO VARCHAR(255) not null,
+NCM INT not null,
+UND VARCHAR(3) not null,
+DT_CADASTRO DATETIME not null,
+DT_ULT_ALTERACAO DATETIME null,
+ID_GRADE_COR INT not null,
+ID_GRADE_TAMANHO INT not null,
+foreign KEY(ID_GRADE_COR) references GRADE_COR(ID),
+foreign KEY(ID_GRADE_TAMANHO) references GRADE_TAMANHO(ID),
+primary KEY(ID)
+)
+
+create table ESTOQUE(
+ID_PRODUTO INT not null,
+ID_COR INT not null,
+ID_TAMANHO INT not null,
+REFERENCIA VARCHAR(255) not null,
+QTD INT not null,
+VALOR_COMPRA DECIMAL(19,2) not null,
+VALOR_VENDA DECIMAL(19,2) not null,
+PERC_VENDA DECIMAL(3,2) not null,
+DT_CADASTRO DATETIME not null,
+DT_ULT_ALTERACAO DATETIME null,
+foreign KEY(ID_PRODUTO) references PRODUTO(ID),
+foreign KEY(ID_COR) references COR(ID),
+foreign KEY(ID_TAMANHO) references TAMANHO(ID),
+primary KEY(ID_PRODUTO, ID_COR, ID_TAMANHO)
+)
+
+create table FORMA_PAGTO(
+ID INT auto_increment,
+DS_FORMA_PAGTO VARCHAR(255) not null,
+DT_CADASTRO DATETIME not null,
+DT_ULT_ALTERACAO DATETIME null,
+primary KEY(ID)
+)
+
+create table CONDICAO_PAGTO(
+ID INT auto_increment,
+DS_CONDICAO_PAGTO VARCHAR(255) not null,
+MULTA DECIMAL(19,2) not null,
+JUROS DECIMAL(19,2) not null,
+DESC_FINANCEIRO DECIMAL(19,2) not null,
+DT_CADASTRO DATETIME not null,
+DT_ULT_ALTERACAO DATETIME null,
+primary KEY(ID)
+)
+
+create table PARCELA_CONDPAGTO(
+ID INT auto_increment,
+ID_CONDICAO_PAGTO INT not null,
+ID_FORMA_PAGTO inT not null,
+foreign KEY(ID_CONDICAO_PAGTO) references CONDICAO_PAGTO(ID),
+foreign KEY(ID_FORMA_PAGTO) references FORMA_PAGTO(ID),
+primary KEY(ID, ID_CONDICAO_PAGTO, ID_FORMA_PAGTO)
+)

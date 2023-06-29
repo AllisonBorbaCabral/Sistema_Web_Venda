@@ -15,19 +15,32 @@ namespace AspNetCore.Contexts
             {
                 var sql = @"
                     SELECT
-                        ID
-                    FROM grade_cor";
+                        a.ID,
+                        a.DS_GRADE,
+                        b.ID,
+                        b.DS_COR
+                    FROM grade_cor a,
+                    cor b, cor_grade c
+                    WHERE a.ID = c.ID_GRADE_COR
+                    AND b.ID = c.ID_COR";
                 OpenConn();
                 qy = new MySqlCommand(sql, conn);
                 reader = qy.ExecuteReader();
                 var list = new List<GradeCor>();
-
                 while (reader.Read())
-                {
+                {                    
                     var gradeCor = new GradeCor
                     {
-                        Id = Convert.ToInt32(reader["ID"]),
+                        Id = Convert.ToInt32(reader["a.ID"]),
+                        Descricao = Convert.ToString(reader["a.DS_GRADE"]),
+                        Cores = new List<Cor>()
                     };
+                    var cor = new Cor
+                    {
+                        Id = Convert.ToInt32(reader["b.ID"]),
+                        DsCor = Convert.ToString(reader["b.DS_COR"])
+                    };
+                    gradeCor.Cores.Add(cor);
                     list.Add(gradeCor);
                 }
                 return list;

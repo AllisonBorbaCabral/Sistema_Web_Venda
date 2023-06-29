@@ -10,6 +10,8 @@ namespace AspNetCore.Controllers
     {
         private GradeCorContext _context = new GradeCorContext();
 
+        private CorContext _contextCor = new CorContext();
+
         public IActionResult Index()
         {
             var gradeCores = _context.GetGradeCores();
@@ -21,13 +23,14 @@ namespace AspNetCore.Controllers
         public IActionResult Create()
         {
             ViewData["Title"] = "Cadastro de grade de cor";
+            ViewBag.Cores = _contextCor.GetCores();
             return View();
         }
 
         [HttpPost]
         public IActionResult Create(CreateGradeCorViewModel data)
         {
-            var gradeCor = new GradeCor();
+            var gradeCor = new GradeCor(data.Descricao, data.Cores);
             _context.CreateGradeCor(gradeCor);
             return RedirectToAction(nameof(Index));
         }

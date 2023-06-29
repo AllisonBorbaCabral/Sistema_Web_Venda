@@ -28,24 +28,51 @@
         </div>
     </div>
 
+    <hr />
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-sm-1">
+                <label asp-for="Id" class="form-label">Código</label>
+                <input asp-for="Id" type="text" class="form-control" disabled>
+            </div>
 
-    <div class="mb-3">
-        <label asp-for="NmEstado" class="form-label">Estado</label>
-        <input asp-for="NmEstado" type="text" class="form-control">
+            <div class="col-sm-5">
+                <label asp-for="NmEstado" class="form-label">Estado</label>
+                <input asp-for="NmEstado" type="text" class="form-control">
+            </div>
+
+            <div class="col-sm-1">
+                <label asp-for="Uf" class="form-label">UF</label>
+                <input asp-for="Uf" type="text" class="form-control">
+            </div>
+        </div>
+        
+        <div class="row justify-content-md-center">
+            <div class="col-sm-1 g-3">
+                <label asp-for="pais" class="form-label">Código</label>
+                <input asp-for="pais.Id" type="text" class="form-control">
+            </div>
+
+            <div class="col-sm-6 g-3">
+                <label asp-for="pais" class="form-label">País</label>
+                <input asp-for="pais.NmPais" type="text" class="form-control" readonly>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-sm-2 g-3">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
+                    Salvar
+                </button>
+                <button asp-controller="Estado" asp-action="Index"  class="btn btn-danger"><i class="fa-solid fa-chevron-left"></i> Voltar</button>
+            </div>
+        </div>
     </div>
 
-    <div class="mb-3">
-        <label asp-for="Uf" class="form-label">UF</label>
-        <input asp-for="Uf" type="text" class="form-control">
-    </div>
+    
 
-    <div class="mb-3">
-        <label asp-for="pais.Id" class="form-label">País</label>
-        <input asp-for="pais.Id" type="text" class="form-control">
-    </div>
 
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
-        Salvar
-    </button>
-    <button asp-controller="Estado" asp-action="Index"  class="btn btn-danger">Voltar</button>
+        
+
 </form>

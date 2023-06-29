@@ -28,8 +28,106 @@
         </div>
     </div>
 
+    <!-- Modal Cor -->
+    <div class="modal fade" id="modalCor" tabindex="-1" aria-labelledby="modalCorLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalCorLabel">Selecione uma Cor</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Descricao" class="form-label">Descrição</label>
+        <input asp-for="Descricao" type="text" class="form-control">
+    </div>
+
+    <!-- <div class="mb-3">
+        <label asp-for="Cores" class="form-label">Cores</label>
+        <select asp-items='@(new SelectList(ViewBag.Cores, "Id", "DsCor"))' class="form-control"></select>
+    </div> -->
+
+    <button  id="btnAbrirModal" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCor">
+        Modal
+    </button>
+
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
         Salvar
     </button>
     <button asp-controller="GradeCor" asp-action="Index"  class="btn btn-danger">Voltar</button>
 </form>
+
+<ul id="listaCoresSelecionadas"></ul>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- <script>
+
+$(document).ready(function() {
+    // Evento de clique no botão "Adicionar" da cor selecionada
+    $('#btnAdicionar').click(function() {
+        adicionarCorSelecionada();
+    });
+});
+
+// Função para adicionar a cor selecionada à lista de cores
+function adicionarCorSelecionada() {
+    var corSelecionada = $('select[name="Cores"]').val();
+    var descricaoCorSelecionada = $('select[name="Cores"] option:selected').text();
+
+    // Verificar se uma cor foi selecionada
+    if (corSelecionada) {
+        var cor = {
+            Id: corSelecionada,
+            DsCor: descricaoCorSelecionada
+        };
+
+        // Cria o elemento da lista com a descrição da cor selecionada
+        var itemLista = $('<li>').text(cor.DsCor);
+        $('#listaCoresSelecionadas').append(itemLista);
+    }
+}
+
+</script> -->
+
+<script>
+$('#btnAbrirModal').click(function() {
+    // Limpa a lista de cores antes de carregar novamente
+    $('#listaCores').empty();
+
+    // Carrega a lista de cores da ViewBag dinamicamente na modal
+    @foreach (var cor in ViewBag.Cores)
+    {
+        <li class="cor-item" data-id="@cor.Id">@cor.DsCor</li>
+    }
+
+    // Adiciona o evento de clique nos itens de cor para selecionar a cor
+    $('.cor-item').click(function() {
+        var idCorSelecionada = $(this).data('id');
+        var descricaoCorSelecionada = $(this).text();
+
+        // Execute as ações necessárias com a cor selecionada
+        adicionarCorSelecionada(idCorSelecionada, descricaoCorSelecionada);
+
+        // Fecha a modal após a seleção
+        $('#modalCor').modal('hide');
+    });
+});
+
+// Função para adicionar a cor selecionada à lista de cores
+function adicionarCorSelecionada(idCor, descricaoCor) {
+    // Implemente a lógica para adicionar a cor à lista de GradeCor
+    // Pode ser uma chamada AJAX para adicionar a cor no servidor, ou uma atualização local da lista
+    // Exemplo:
+    var itemLista = $('<li>').text(descricaoCor);
+    $('#listaCoresSelecionadas').append(itemLista);
+}
+</script>
