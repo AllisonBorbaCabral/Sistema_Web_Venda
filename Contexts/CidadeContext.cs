@@ -1,9 +1,5 @@
 using MySqlConnector;
-using Microsoft.Extensions.Configuration;
-using System.Drawing;
-using System.Data;
 using AspNetCore.Models;
-using AspNetCore.ViewModels;
 
 namespace AspNetCore.Contexts
 {

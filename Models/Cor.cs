@@ -5,14 +5,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace AspNetCore.Models
 {
     [Table("cor")]
-    public class Cor
+    public class Cor:Pai
     {
-        [Key]
-        [Display(Name = "Código")]
-        public int Id { get; set; }
         public string DsCor { get; set; }
-        public DateTime DataCadastro { get; set; }
-        public DateTime DataUltAlteracao { get; set; }
         public bool IsAtivo { get; set; }
 
         public Cor(string dsCor)

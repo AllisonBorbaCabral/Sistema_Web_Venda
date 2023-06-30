@@ -5,14 +5,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace AspNetCore.Models
 {
     [Table("forma_pagto")]
-    public class FormaPagto
+    public class FormaPagto:Pai
     {
-        [Key]
-        [Display(Name = "Código")]
-        public int Id { get; set; }
         public string DsFormaPagto { get; set; }
-        public DateTime DataCadastro { get; set; }
-        public DateTime DataUltAlteracao { get; set; }
         public bool IsAtivo { get; set; }
 
         public FormaPagto(string dsFormaPagto)

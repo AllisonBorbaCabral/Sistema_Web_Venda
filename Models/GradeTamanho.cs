@@ -5,15 +5,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace AspNetCore.Models
 {
     [Table("grade_tamanho")]
-    public class GradeTamanho
+    public class GradeTamanho:Pai
     {
-        [Key]
-        [Display(Name = "Código")]
-        public int Id { get; set; }
-        public DateTime DataCadastro { get; set; }
-        public DateTime DataUltAlteracao { get; set; }
+        public string Descricao { get; set; }
+        public ICollection<Tamanho> Tamanhos { get; set; } = new List<Tamanho>();
         public bool IsAtivo { get; set; }
 
+        public GradeTamanho(string descricao, ICollection<Tamanho> tamanhos)
+        { 
+            Descricao = descricao;
+            Tamanhos = tamanhos;
+        }
         public GradeTamanho()
         { }
     }
